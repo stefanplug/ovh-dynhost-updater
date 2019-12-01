@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import json
 import requests
 
 
@@ -8,7 +9,8 @@ def main():
 
     :return:
     """
-    config = load_json("config.json")
+    with open("config.json", 'r') as file:
+        config = json.load(file)
 
     # First we need to get our public IP address
     ip_data = requests.get(url='https://api.ipify.org?format=json').json()
