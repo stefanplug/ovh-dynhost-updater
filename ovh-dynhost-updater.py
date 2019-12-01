@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 import requests
-from functions.json_functions import load_json
 
 
 def main():
